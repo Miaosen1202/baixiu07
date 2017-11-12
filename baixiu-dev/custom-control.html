@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .checkbox1 {
+      display: none;
+    }
+    .checkbox1 + i {
+      /*content: ' ';*/
+      display: inline-block;
+      font-style: normal;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #c0c0c0;
+    }
+
+    .checkbox1:checked + i {
+      background-color: hotpink;
+    }
+
+    .checkbox1 + i::after {
+    }
+    .checkbox1:checked + i::after {
+      content: ' ';
+      display: inline-block;
+      margin: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+
+    /*ul > li {
+      color: hotpink;
+    }
+
+    ul > li + li {
+      color: yellow;
+    }*/
+
+    ul {
+      list-style: none;
+      font-size: 0;
+    }
+
+    ul > li {
+      display: inline-block;
+    }
+
+    ul > li + li::before {
+      content: '|';
+    }
+  </style>
+</head>
+<body>
+  <label>
+    <input type="checkbox" class="checkbox1">
+    <i></i>
+  </label>
+
+  <ul>
+    <li class="first">item 01</li>
+    <li>item 02</li>
+    <li>item 03</li>
+    <li>item 04</li>
+    <li>item 05</li>
+    <li class="demo">item 06</li>
+    <li>item 07</li>
+    <li>item 08</li>
+    <li>item 09</li>
+    <li>item 10</li>
+  </ul>
+
+  <style>
+    .container {
+      height: 100px;
+      width: 900px;
+      font-size: 0;
+    }
+    .item {
+      display: inline-block;
+      width: 300px;
+      height: 100px;
+      /*float: left;*/
+      background-color: pink;
+      font-size: 16px;
+    }
+    .item:nth-child(2n + 1) {
+      background-color: hotpink;
+    }
+  </style>
+  <div class="container">
+    <div class="item">111</div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+
+  <progress></progress>
+</body>
+</html>
